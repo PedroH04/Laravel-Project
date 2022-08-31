@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\LoginPageController;
+use App\Http\Controllers\DataLoginsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,9 @@ use App\Http\Controllers\LoginPageController;
 |
 */
 //Route::get('/LoginAccount/{id}',[RouteController::class,'Log_in']);
-Route::get('/',[LoginPageController::class,'Login']);
+Route::get('/login',[LoginPageController::class,'Login']);
 Route::get('/box',[LoginPageController::class,'box']);
+Route::get('/', DataLoginsController::class);
 
 
 
