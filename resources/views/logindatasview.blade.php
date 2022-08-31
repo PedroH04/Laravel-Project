@@ -32,7 +32,6 @@
         </tbody>
     </table>
     <pre>
-    <!-- {{$logindatas[0]['id']}} -> {{$logindatas[0]['nome']}} - {{$logindatas[0]['email']}} -->
     </pre>
 
 </body>
