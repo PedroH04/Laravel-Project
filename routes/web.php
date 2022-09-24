@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\DataControllers;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\LoginPageController;
 use App\Http\Controllers\DataLoginsController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\homebancodedados;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,16 @@ Route::get('/login',[LoginPageController::class,'Login']);
 Route::get('/box',[LoginPageController::class,'box']);
 Route::get('/resultado', DataLoginsController::class);
 Route::get('/Fomulario',[FormController::class,'Fomulario']);
+
+
+/**
+ * -----------BANCO DE DADOS--------------
+ */
+
+Route::get('/', [DataControllers::class, 'Home'])->name('DataControllers.Home');
+Route::get('/Perfil/{id?}', [DataControllers ::class,'DataView'])->name('DataControllers.DataView');
+Route::post('/Registro', [DataControllers ::class,'RegisterView'])->name('DataControllers.RegistrarView');
+Route::get('/Registro', [DataControllers ::class,'RegisterForm'])->name('DataControllers.RegisterForm');
 
 
 
