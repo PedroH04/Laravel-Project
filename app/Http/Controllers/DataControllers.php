@@ -23,9 +23,8 @@ class DataControllers extends Controller
         return view('FormCadastro');
     }
     public function RegisterForm(Request $request){
-        $form = $request->except('_token');
-        bancodedado::create($form);
+        $data = $request->except('_token');
+        bancodedado::create($data);
         return redirect('/');
-
     }
 }

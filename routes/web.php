@@ -31,8 +31,8 @@ Route::get('/Fomulario',[FormController::class,'Fomulario']);
 
 Route::get('/', [DataControllers::class, 'Home'])->name('DataControllers.Home');
 Route::get('/Perfil/{id?}', [DataControllers ::class,'DataView'])->name('DataControllers.DataView');
-Route::post('/Registro', [DataControllers ::class,'RegisterView'])->name('DataControllers.RegistrarView');
-Route::get('/Registro', [DataControllers ::class,'RegisterForm'])->name('DataControllers.RegisterForm');
+Route::get('/Registro', [DataControllers ::class,'RegisterView'])->name('DataControllers.RegistrarView');
+Route::post('/Registro', [DataControllers ::class,'RegisterForm'])->name('DataControllers.RegisterForm');
 
 
 

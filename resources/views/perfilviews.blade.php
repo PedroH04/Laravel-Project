@@ -2,6 +2,40 @@
 @section('title','Perfil')
 @section('conteudo')
 
+<style>
+    #container{
+  border: 2px solid black;
+  width: 80%;
+  height: 25%;
+  border-radius: 0px 0px 20px 20px ;
+  box-shadow: 1px 1px 20px #000;
+  background-color:#F0F8FF;
+} 
+
+.btn{
+  border: 1px solid black;
+  padding: 5px;
+  margin-left: 3px;
+  width: 100px;
+  background-color: #000;
+
+}
+a {
+  color: white;
+}
+
+td{
+  border: 1px solid #DCDCDC;
+}
+th {
+  border-right: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+</style>
+
+<section>
+  <div id="container">
 <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -19,7 +53,9 @@
         <td>{{$data -> email}}</td>
         <td>{{$data -> cidade}}</td>
         <td>{{$data -> observation}}</td>
-      </tr>
+    </tr>
   </table>
-  <button type="button" class="btn btn-success"><a href="{{ route('DataControllers.Home') }}">Voltar</></button>
-@endsection
+  <button type="button" class="btn"><a href="{{ route('DataControllers.Home') }}"><=Voltar</></button>
+  </section>
+  </div>
+    @endsection
